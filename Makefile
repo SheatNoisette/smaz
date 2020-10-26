@@ -1,7 +1,11 @@
+CFLAGS = -O2 -Wall -Wall -D_XOPEN_SOURCE=500 -pedantic
+OBJ=smaz_test.o smaz.o
+
 all: smaz_test
 
-smaz_test: smaz_test.c smaz.c
-	gcc -o smaz_test -O2 -Wall -W -ansi -pedantic smaz.c smaz_test.c
+smaz_test: $(OBJ)
+	gcc $(OBJ) -o smaz_test
 
 clean:
-	rm -rf smaz_test
+	$(RM) $(OBJ)
+	$(RM) smaz_test

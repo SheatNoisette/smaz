@@ -1,5 +1,4 @@
-SMAZ - compression for very small strings
------------------------------------------
+# SMAZ - compression for very small strings
 
 Smaz is a simple compression library suitable for compressing very short
 strings. General purpose compression libraries will build the state needed
@@ -14,11 +13,12 @@ that Smaz is able to compress even strings of two or three bytes!
 
 For example the string "the" is compressed into a single byte.
 
-To compare this with other libraries, think that like zlib will usually not be able to compress text shorter than 100 bytes.
+To compare this with other libraries, think that like zlib will usually not be
+able to compress text shorter than 100 bytes.
 
-COMPRESSION EXAMPLES
---------------------
+# EXAMPLES
 
+```
 'This is a small string' compressed by 50%
 'foobar' compressed by 34%
 'the end' compressed by 58%
@@ -36,15 +36,17 @@ by smaz:
 'Nel mezzo del cammin di nostra vita, mi ritrovai in una selva oscura' compressed by 33%
 'Mi illumino di immenso' compressed by 37%
 'L'autore di questa libreria vive in Sicilia' compressed by 28%
+```
 
 It can compress URLS pretty well:
 
+```
 'http://google.com' compressed by 59%
 'http://programming.reddit.com' compressed by 52%
 'http://github.com/antirez/smaz/tree/master' compressed by 46%
+```
 
-USAGE
------
+# USAGE
 
 The lib consists of just two functions:
 
@@ -65,7 +67,7 @@ not automatically put a nul-term at the end of the string if the original
 compressed string didn't included a nulterm.
 
 
-CREDITS
--------
+# CREDITS
 
-Small was writte by Salvatore Sanfilippo and is released under the BSD license. Check the COPYING file for more information.
+Smaz was written by Salvatore Sanfilippo and is released under the BSD license.
+Check the COPYING file for more information.
